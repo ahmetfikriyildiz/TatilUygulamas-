@@ -71,6 +71,21 @@ namespace TatilUygulaması
 
                 Console.WriteLine("-------------------");
 
+                if (location == "Bodrum")
+                {
+                    Console.WriteLine("Bodrum'da Yapılabilecek Aktiviteler:\r\nBodrum Kalesi ve Sualtı Arkeoloji Müzesi'ni Ziyaret Etme: Bodrum'un tarihi mirasını keşfedin, denizcilik tarihine tanık olun.\r\nTekne Turları ve Plaj Aktiviteleri: Güzel koylara düzenlenen tekne turları ile denizin keyfini çıkarın, plajlarda dinlenin ve su sporları yapın.");
+                }
+                else if (location == "Marmaris")
+                {
+                    Console.WriteLine("Marmaris'te Yapılabilecek Aktiviteler:\r\nMarmaris Kalesi ve Müzesi'ni Gezme: Marmaris'in tarihini öğrenin, kaleden şehrin manzarasının tadını çıkarın.\r\nSafari Turları ve Doğa Yürüyüşleri: Jeep safari turlarıyla doğa keşfine çıkın, Marmaris'in doğal güzelliklerini keşfedin.");
+                }
+                else
+                {
+                    Console.WriteLine("Çeşme'de Yapılabilecek Aktiviteler:\r\nÇeşme Kalesi ve Alaçatı Sokaklarında Gezinme: Tarihi Çeşme Kalesi'ni keşfedin, Alaçatı'nın taş sokaklarında dolaşıp butiklere göz atın.\r\nRüzgar Sörfü ve Plaj Keyfi: Alaçatı'da rüzgar sörfü yaparak denizin tadını çıkarın ya da Çeşme'nin ünlü plajlarında güneşlenin ve yüzün.");
+                }
+
+                Console.WriteLine("-------------------");
+
                 while (!validInput)
                 {
                     Console.WriteLine("Lütfen tatilinize nasıl gitmek istediğinizi seçiniz: ");
@@ -85,7 +100,7 @@ namespace TatilUygulaması
                             validInput = true;
                             tValue = 1500;
                             break;
-                        case 2:  
+                        case 2:
                             tName = "Havayolu";
                             validInput = true;
                             tValue = 4000;
@@ -103,7 +118,7 @@ namespace TatilUygulaması
                 Console.WriteLine($"Planlanan tatil için kişi sayısı: {personCount}");
                 Console.WriteLine($"Seçtiğiniz ulaşım yolu: {tName}");
                 Console.WriteLine($"Toplam tatil tutarı: {toplamFiyat}");
-                
+
                 Console.WriteLine("\nBaşka bir tatil planlamak ister misiniz? (Evet/Hayır)");
                 string anotherVacationAnswer = Console.ReadLine().ToLower();
                 if (anotherVacationAnswer != "evet")
@@ -111,7 +126,7 @@ namespace TatilUygulaması
                     anotherVacation = false;
                     Console.WriteLine("İyi günler!");
                 }
-                Console.WriteLine("-----------------------------------------------------------");                
+                Console.WriteLine("-----------------------------------------------------------");
             }
         }
     }
